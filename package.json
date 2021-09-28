@@ -1,0 +1,22 @@
+{
+  "name": "cadastroaluno",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend NodeJS para o app cadastroAluno",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stored",
+    "procedure",
+    "sql",
+    "server",
+    "node"
+  ],
+  "author": "Guilherme Boves",
+  "license": "MIT",
+  "dependencies": {
+    "mssql": "^7.2.1"
+  }
+}
