@@ -1,0 +1,51 @@
+//Teste de requisições REST - Alunos
+
+@baseURL = http://localhost:4000/api
+
+@matricula = 12345679
+###
+// GET - Lista todos os alunos
+GET {{baseURL}}/alunos
+Content-Type: application/json
+
+###
+// GET - Lista apenas alunos pela matrícula
+GET {{baseURL}}/alunos/{{matricula}}
+Content-Type: application/json
+
+###
+// POST - Inclui um novo aluno
+POST {{baseURL}}/alunos
+Content-Type: application/json
+
+{
+    "matricula": 123456,
+    "nome": "Jamilly",
+    "curso": "Medicina",
+    "genero": "Feminino",
+    "nascimento": "",
+    "rg": "12.345.678-1",
+    "email": "teste@teste3",
+    "celular": "15-99415-5124"
+}
+
+###
+// PUT - Altera um aluno existente
+PUT {{baseURL}}/alunos
+Content-Type: application/json
+
+{
+    "matricula":123456,
+    "nome":"Roberta",
+    "curso":"Direito",
+    "genero":"Feminino",
+    "nascimento": "2002-04-25",
+    "rg": "12.345.679-9",
+    "email": "teste@teste4",
+    "celular": "1599415-5124"
+}
+
+###
+// DELETE - Apaga um aluno através da matrícula
+DELETE {{baseURL}}/alunos/{{matricula}}
+Content-Type: application/json
