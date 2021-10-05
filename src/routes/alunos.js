@@ -9,9 +9,9 @@ const router = express.Router()
  * Retornar a lista de todos os alunos
  *****************************************/
 router.get("/", (req, res) => {
-    try{
+   try{
         sql.connect(sqlConfig).then(pool => {
-            return pool.request()
+            return pool.request()                   
             .execute('SP_S_ALU_ALUNO')
         }).then(dados => {
             res.status(200).json(dados.recordset)
